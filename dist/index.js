@@ -42,12 +42,15 @@ function render() {
     let leads = getLeads();
     ulEl.innerHTML = "";
     leads.forEach(lead => {
-        let leadText = document.createTextNode(lead);
         let li = document.createElement('li');
         let btn = document.createElement('button');
+        let anchor = document.createElement('a');
         btn.textContent = "X";
         btn.style.marginLeft = "10px";
-        li.appendChild(leadText);
+        anchor.href = lead;
+        anchor.target = "_blank";
+        anchor.textContent = lead;
+        li.appendChild(anchor);
         li.appendChild(btn);
         ulEl.appendChild(li);
         btn.addEventListener("click", () => {

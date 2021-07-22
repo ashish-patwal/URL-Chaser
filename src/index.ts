@@ -52,14 +52,17 @@ function render(): void {
     let leads = getLeads();
     ulEl.innerHTML = "";
         leads.forEach( lead => {
-            let leadText: Text = document.createTextNode(lead);
-            let li: HTMLElement = document.createElement('li');
-            let btn: HTMLElement = document.createElement('button');
+            let li: HTMLLIElement = document.createElement('li') as HTMLLIElement;
+            let btn: HTMLButtonElement = document.createElement('button') as HTMLButtonElement;
+            let anchor: HTMLAnchorElement = document.createElement('a') as HTMLAnchorElement;
 
             btn.textContent = "X";
-            btn.style.marginLeft = "10px"
+            btn.style.marginLeft = "10px";
+            anchor.href = lead;
+            anchor.target = "_blank";
+            anchor.textContent = lead;
 
-            li.appendChild(leadText);
+            li.appendChild(anchor);
             li.appendChild(btn);
             ulEl.appendChild(li);
             btn.addEventListener("click", (): void => {
