@@ -1,0 +1,22 @@
+{
+  "name": "url-chaser",
+  "version": "1.0.0",
+  "description": "a chrome extension to store frequently used urls and messages .",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashish-patwal/URL-Chaser.git"
+  },
+  "author": "ashish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashish-patwal/URL-Chaser/issues"
+  },
+  "homepage": "https://github.com/ashish-patwal/URL-Chaser#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.0.148"
+  }
+}
