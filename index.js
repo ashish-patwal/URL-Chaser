@@ -33,17 +33,21 @@ inputBtn.addEventListener("click", function() {
 })
 
 function render() {
+    ulEl.innerHTML="";
     let leads = getLeads();
-    let listItems = ""
     leads.forEach( lead => {        
-    listItems += `
-            <li>
-                <a target='_blank' href='${lead}'>${lead}</a>
-                <button onclick="clearThisLead('${lead}')">Remove</button>
-            </li>
-        `
+        let leadtext = document.createTextNode(lead);
+        let li = document.createElement('li');
+        let btn = document.createElement('button');
+        btn.textContent = 'X';
+        btn.style.marginLeft = '10px';
+        li.appendChild(leadtext);
+        li.appendChild(btn);
+        ulEl.appendChild(li); 
+        btn.addEventListener('click', () => {
+            clearThisLead(lead);
+        })
     })
-    ulEl.innerHTML = listItems
 }
 
 function getLeads() {
