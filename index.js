@@ -7,7 +7,7 @@ const tabBtn = document.getElementById("tab-btn")
 
 let leads = getLeads();
 
-if (leads == null) {
+if(leads == null){
     setLeads([]);
 }
 
@@ -38,9 +38,7 @@ function render() {
     leads.forEach( lead => {        
     listItems += `
             <li>
-                <a target='_blank' href='${lead}'>
-                    ${lead}
-                </a>
+                <a target='_blank' href='${lead}'>${lead}</a>
                 <button onclick="clearThisLead('${lead}')">Remove</button>
             </li>
         `
