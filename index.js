@@ -16,13 +16,13 @@ render();
 tabBtn.addEventListener("click", function(){    
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
         addLead(tabs[0].url)
-        render(myLeads)
+        render()
     })
 })
 
 deleteBtn.addEventListener("dblclick", function() {
     setLeads([])
-    myLeads = []
+    leads = []
     render()
 })
 
