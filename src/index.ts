@@ -56,8 +56,8 @@ function render(): void {
             let btn: HTMLButtonElement = document.createElement('button') as HTMLButtonElement;
             let anchor: HTMLAnchorElement = document.createElement('a') as HTMLAnchorElement;
 
-            btn.textContent = "X";
-            btn.style.marginLeft = "10px";
+            btn.className = "removeButton";
+            btn.innerHTML = "<img src='./remove.png' width='15' height='15' alt='remove'>";
             anchor.href = lead;
             anchor.target = "_blank";
             anchor.textContent = lead;

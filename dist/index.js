@@ -45,8 +45,8 @@ function render() {
         let li = document.createElement('li');
         let btn = document.createElement('button');
         let anchor = document.createElement('a');
-        btn.textContent = "X";
-        btn.style.marginLeft = "10px";
+        btn.className = "removeButton";
+        btn.innerHTML = "<img src='./remove.png' width='15' height='15' alt='remove'>";
         anchor.href = lead;
         anchor.target = "_blank";
         anchor.textContent = lead;

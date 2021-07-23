@@ -24,6 +24,11 @@ button {
     border-radius: 0.3rem;
 }
 
+.removeButton {
+    background: transparent;
+    border: none;
+}
+
 #delete-btn {
     background: white;
     border: 1px solid #96BAFF;
@@ -38,8 +43,16 @@ ul {
 
 li {
     margin-top: 5px;
+    background: #FDBAF8;
+    border-radius: 2px;
+    padding: 0.75rem;
 }
 
 a {
-    color: #7DEDFF;
+    color: #fff;
+    text-decoration: none;
+    background: #ECA3F5;
+    font-weight: bolder;
+    border-radius: 2px;
+    font-size: 0.9rem;
 }
